@@ -14,7 +14,7 @@ In this folder, you will find a .yml file that contains the required environment
 In this folder, there are a some samples of visualizations taken from some of the notebooks.
 
 ### Data
-This folder contains the original data taken from [Kaggle](https://www.kaggle.com/datasets/hijest/genre-classification-dataset-imdb), as well as the processed data, and the training and testing I created for the modelling process.
+This folder contains the original data taken from [Kaggle](https://www.kaggle.com/datasets/hijest/genre-classification-dataset-imdb), as well as the processed data, and the training and testing I created for the modeling process.
 
 ### Models
 This folder contains just one file, which is the best performing model I created in notebook 3.1.
@@ -28,10 +28,10 @@ In this notebook, I dive further preprocessing the data by removing stopwords, v
 <img src="https://github.com/andrew-alarcon17/BrainStation-Capstone/blob/master/Visualizations/TFIDF.png" width="500">
 
 ### 3.1) Logistic Regression
-This notebook goes through the first round of Logistic Regression modelling, where I make a model with optimal hyper parameters using Grid Search, and a model with reduced dimensions of the data set using Principal Component Analysis.
+This notebook goes through the first round of Logistic Regression modeling, where I make a model with optimal hyper parameters using Grid Search, and a model with reduced dimensions of the data set using Principal Component Analysis.
 
 ### 3.2) Logistic Regression 2
-In this notebook, I rerun the Logistic Regression PCA model using a dataset that excludes 3 genres. These genres were `game show`, `war`, and `news`, and they were dropped becuase they lacked enough data entries. I wanted to experiment to see if this new model would perform better than the models made in the previous notebook.
+In this notebook, I rerun the Logistic Regression PCA model using a dataset that excludes 3 genres. These genres were `game show`, `war`, and `news`, and they were dropped because they lacked enough data entries. I wanted to experiment to see if this new model would perform better than the models made in the previous notebook.
 
 ### 4) Random Forest
 This notebook focuses on constructing and optimizing a Random Forest Classifier to predict the genre of a data entry.
