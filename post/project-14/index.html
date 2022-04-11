@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Project 14: Starbucks Customers &amp; Offers | Andrew Alarcon</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.72.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="https://andrew-alarcon17.github.io/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Project 14: Starbucks Customers &amp; Offers" />
+<meta property="og:description" content="Problem Introduction This project contains mimicked user behavior on the Starbucks rewards mobile application. In this app, Starbucks sends out offers to its customers, like BOGO (buy one, get one free) or a discount. Different users get different offers. So the main goal of this project was to figure out which offers succeed the most to which types of customers.
+Data Description: There are three main data sets that we will be working with for this project." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://andrew-alarcon17.github.io/post/project-14/" />
+<meta property="article:published_time" content="2021-09-09T11:25:05-04:00" />
+<meta property="article:modified_time" content="2021-09-09T11:25:05-04:00" />
+<meta itemprop="name" content="Project 14: Starbucks Customers &amp; Offers">
+<meta itemprop="description" content="Problem Introduction This project contains mimicked user behavior on the Starbucks rewards mobile application. In this app, Starbucks sends out offers to its customers, like BOGO (buy one, get one free) or a discount. Different users get different offers. So the main goal of this project was to figure out which offers succeed the most to which types of customers.
+Data Description: There are three main data sets that we will be working with for this project.">
+<meta itemprop="datePublished" content="2021-09-09T11:25:05-04:00" />
+<meta itemprop="dateModified" content="2021-09-09T11:25:05-04:00" />
+<meta itemprop="wordCount" content="1625">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project 14: Starbucks Customers &amp; Offers"/>
+<meta name="twitter:description" content="Problem Introduction This project contains mimicked user behavior on the Starbucks rewards mobile application. In this app, Starbucks sends out offers to its customers, like BOGO (buy one, get one free) or a discount. Different users get different offers. So the main goal of this project was to figure out which offers succeed the most to which types of customers.
+Data Description: There are three main data sets that we will be working with for this project."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://andrew-alarcon17.github.io/Starbucks_Charts/starbucks_banner.png');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://andrew-alarcon17.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Andrew Alarcon
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://andrew-alarcon17.github.io/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://andrew-alarcon17.github.io/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://andrew-alarcon17.github.io/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+<a href="https://www.linkedin.com/in/andrewalarcon17/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/andrew-alarcon17" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project 14: Starbucks Customers &amp; Offers</h1>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://andrew-alarcon17.github.io/post/project-14/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://andrew-alarcon17.github.io/post/project-14/&amp;text=Project%2014:%20Starbucks%20Customers%20&amp;%20Offers" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://andrew-alarcon17.github.io/post/project-14/&amp;title=Project%2014:%20Starbucks%20Customers%20&amp;%20Offers" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Project 14: Starbucks Customers &amp; Offers</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-09-09T11:25:05-04:00">September 9, 2021</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="problem-introduction">Problem Introduction</h2>
+<p>This project contains mimicked user behavior on the Starbucks rewards mobile application. In this app, Starbucks sends out offers to its customers, like BOGO (buy one, get one free) or a discount. Different users get different offers. So the main goal of this project was to figure out which offers succeed the most to which types of customers.</p>
+<h2 id="data-description">Data Description:</h2>
+<p>There are three main data sets that we will be working with for this project. They are Portfolio, Profile, and Transcript. Each dataset contains the following information:</p>
+<h3 id="portfolio">Portfolio:</h3>
+<p>The porfolio dataset contains information on the offers, such as:</p>
+<ul>
+<li>id (string) - offer id</li>
+<li>offer_type (string) - type of offer ie BOGO, discount, informational</li>
+<li>difficulty (int) - minimum required spend to complete an offer</li>
+<li>reward (int) - reward given for completing an offer</li>
+<li>duration (int) - time for offer to be open, in days</li>
+<li>channels (list of strings)</li>
+</ul>
+<h3 id="profile">Profile:</h3>
+<p>The profile dataset contains information about the customer, such as:</p>
+<ul>
+<li>age (int) - age of the customer</li>
+<li>became_member_on (int) - date when customer created an app account</li>
+<li>gender (str) - gender of the customer (note some entries contain &lsquo;O&rsquo; for other rather than M or F)</li>
+<li>id (str) - customer id</li>
+<li>income (float) - customer&rsquo;s income</li>
+</ul>
+<h3 id="transcript">Transcript:</h3>
+<p>The transcript dataset contains information about what kind of activity was performed on an offer, such as:</p>
+<ul>
+<li>event (str) - record description (ie transaction, offer received, offer viewed, etc.)</li>
+<li>person (str) - customer id</li>
+<li>time (int) - time in hours since start of test. The data begins at time t=0</li>
+<li>value - (dict of strings) - either an offer id or transaction amount depending on the record</li>
+</ul>
+<h2 id="strategy-to-solve-the-problem">Strategy to Solve the Problem</h2>
+<p>After viewing what each dataset had to offer, the first thing I wanted to do was to start cleaning the datasets and changing them into a format that would seem appropriate for what I wanted to do. For the Portfolio, I thought it would be important to create categorical columns for the offer type and channel columns.</p>
+<p>As for the Profile, it was necessary to reformat the became_member_on column, and create age groups and income classes in order to create visualizations easier to understand later on in the project.</p>
+<p>The Transcript dataset required something interesting in order to understand the data a bit better. I wanted to separate the offers and transactions into two different dataframes. This allowed it to be easier to organize the information presented in the offer types and the transactions.</p>
+<h2 id="metrics">Metrics</h2>
+<p>Here, I would like to discuss how we will be measuring the performance of the classification models that will be made
+We will be using the following:</p>
+<ul>
+<li>F1 Score: This is the weighted average of the Precision and Recall of the model.</li>
+<li>Precision shows the ratio of the amount of True Positives to the sum of the amount of True Positives and the amount of False Positives. This ultimately will tell us: out of all of those that were predicted as positive, how many of them are actually positive.</li>
+<li>Recall shows us the ratio of the amount of True Positives to the sum of the amount of True Positives and the amount of False Negatives. The will tell us how many of the actual positive values our model has found through labeling it as a True Positive.</li>
+<li>Accuracy will tell us how accurate our model is by dividing the number of correct prediction by the total number of predictions.</li>
+</ul>
+<h2 id="exploratory-data-analysis">Exploratory Data Analysis</h2>
+<p>Here is a brief summary of some parts for each dataset after cleaning (further visualizations and understanding can be viewed within the jupyter notebook in the github repo link at the bottom of this article).</p>
+<h3 id="portfolio-analysis">Portfolio Analysis:</h3>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Offer_Type_Distr.png"/> 
+</figure>
+
+<p>We see that out of all offers, BOGO and Discount offers appear the most to customers.</p>
+<h3 id="profile-analysis">Profile Analysis:</h3>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Age_Classes.png"/> 
+</figure>
+
+<p>When comparing the count of age groups, the most common customers&rsquo; age fall under the Adult and Senior groups.</p>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Income_Classes.png"/> 
+</figure>
+
+<p>As for the income classes, we see people who have an average income shop the most at Starbucks.</p>
+<p>The ranges for each class are:</p>
+<p>Lower: 29000 to 49000
+Average: 49000 to 79000
+Above_Avg: 79000 to 89000
+Upper: Above 89000</p>
+<h3 id="offers-analysis">Offers Analysis</h3>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Offer_Type_Distr.png"/> 
+</figure>
+
+<p>The offer event that appears the most is offer received.</p>
+<h3 id="transactions-analysis">Transactions Analysis</h3>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Ave_Spent_by_Age.png"/> 
+</figure>
+
+<p>Here is the average amount spent by gender for each age group. Looks like male seniors spend the most.</p>
+<h2 id="finding-successful-offers">Finding Successful Offers</h2>
+<p>In order to find whether or not an offer was successful, we need to go through the data that is given to us in a particular manner.</p>
+<p>For every unique customer id, we are going to get the offers and transactions associated with that id and all of the information that goes along with those that are found in the Profile and Portfolio dataframes.</p>
+<p>Once we have that information for that one unique customer id, we will go through each row of information to see whether or not the offer was completed within the time window where the offer is valid. If this is true, then we can say the offer was successful. We do this for all offers, for all unique customer ids. Once this column is obtained, we can start visualizing the data.</p>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Offers_Successful_Income.png"/> 
+</figure>
+
+<p>For income classes, we see that offers are more successful for upper and above average customers, and more unsuccessful for average and lower income customers.</p>
+<p>Let&rsquo;s look at the behavior each successful offer type for the age groups.</p>
+<h3 id="successful-bogo-offers">Successful BOGO Offers</h3>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Successful_Bogo_by_Age.png"/> 
+</figure>
+
+<p>Here we see that the BOGO offer in red is the most successful for all 4 age groups.</p>
+<h3 id="successful-informational-offers">Successful Informational Offers</h3>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Successful_Info_by_Age.png"/> 
+</figure>
+
+<p>For informational offers, they tend to be more successful with seniors and adults.</p>
+<h3 id="successful-discount-offers">Successful Discount Offers</h3>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Successful_Discount_by_Age.png"/> 
+</figure>
+
+<p>Here we see that the blue and purple discount offer id&rsquo;s dominate in all 4 age groups.</p>
+<h2 id="modelling">Modelling</h2>
+<p>For the model, we want to be able to predict whether or not a customer will successfully complete an offer or not. Since the output is either a 1 or 0, this is a classification problem that we would like to solve.</p>
+<p>While selecting the features needed for the model, I decided to change the gender column to numerical so that I could include it in the model.
+So the features I ended up using for the model were age, bogo, discount, duration, email, gender, income, informational, member year, member month, mobile, reward, social, time, and web.
+And of course, our predictor here is the offer_successful column.
+Once we have our features and predictor ready, we will split the data into training and testing.</p>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/X_Y.png"/> 
+</figure>
+
+<p>Now for creating the model. Let&rsquo;s start with creating the Logistic Regression model. We will create two of these. One model will run on the data that is only standardized, the second will run on the data that is standardized then normalized. The results of these two will be compared.</p>
+<p>Logistic Regression Model w/ Standardized Data
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Log_Reg_St.png"/> 
+</figure>
+</p>
+<p>Logistic Regression Model w/ Standardized &amp; Normalized Data
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/L_R_St_Norm.png"/> 
+</figure>
+</p>
+<p>We see a slightly better performance of the model after normalization for the F1 Score, Recall, and Accuracy.
+After we evaluate our model with cross-validation, we end up with an average Accuracy score of 71%.</p>
+<p>Now for the Random Forest Classifier&hellip;</p>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/Random_Forest.png"/> 
+</figure>
+
+<p>We see that for all 4 measurements, this model is performing worse than our second Logistic Regression model.
+After cross-validation, we end up with an average Accuracy score of 70%, just 1% lower than our Logistic Regression model.</p>
+<p>Let&rsquo;s tune both the Logistic Regression and the Random Forest models, and then compare the two.</p>
+<h2 id="hyperparameter-tuning">Hyperparameter tuning</h2>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/LR_Tuning.png"/> 
+</figure>
+
+<p>For tuning the Logistic Regression model, we added values of C as our tuning parameter. Here, C is the inverse of regularization strength. So, the smaller values of C indicate a stronger regularization.
+(Note)
+Regularization is the technique that discourages learning a more complex model in order to avoid overfitting.</p>
+<figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/RF_Tuning.png"/> 
+</figure>
+
+<p>To tune the Random Forest Classifier, we add a range of values for our estimators and a range of how many features we desire to be tested out. In this case, I used a range from 6 to 14 features (our max amount of features).</p>
+<h2 id="results">Results</h2>
+<p><figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/LR_Final_Results.png"/> 
+</figure>
+
+Here are the final results for the Logistic Regression model.</p>
+<p><figure>
+    <img src="https://andrew-alarcon17.github.io/Starbucks_Charts/RF_Final_Results.png"/> 
+</figure>
+
+And here are the final results for the Random Forest Classifier.</p>
+<p>We can see that for the F1 Score, Recall, and Accuracy, the Logistic Regression model beats out the Random Forest Classifier. However, for both models, the Precision score is very very close.</p>
+<h2 id="reflection">Reflection</h2>
+<p>This project was definitely a very welcoming challenge. What made it particularly challenging was how open it was right from the beginning. As a student, I enjoyed figuring out how to navigate this level of freedom when dealing with such a vast amount of data, and trying to figure out an answer to the main problem at hand.
+While working on this project, I was able to look back on previous projects to help myself out what should come next in the Data Science process. Cleaning, organizing, and analyzing the data was very insightful, and figuring out how to transform the data to prepare to create a machine learning model was challenging and a great learning experience. I was able to implement all of the major skills I learned throughout this course onto this project, and that is exactly what I enjoyed the most while working on this final capstone project.</p>
+<h2 id="improvements">Improvements</h2>
+<p>Further improvements can still be made to the models. For my solution, I standardized and normalized the data, and ended up having a better performing Logistic Regression model than when I only standardized the data. As for the Random Forest Classifier, it ended up performing just a little worse than the Logistic Regression model. What can be done with the Random Forest Classifier is by implementing XGBoost. This could help better train and evaluate the Random Forest Classifier.</p>
+<p><a href="https://github.com/andrew-alarcon17/Starbucks_Capstone">Link to Github Repository</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://andrew-alarcon17.github.io/" >
+    &copy;  Andrew Alarcon 2022 
+  </a>
+    <div>
+
+
+
+
+
+
+
+<a href="https://www.linkedin.com/in/andrewalarcon17/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/andrew-alarcon17" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="https://andrew-alarcon17.github.io/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Andrew Alarcon</title>
+    <link>https://andrew-alarcon17.github.io/post/</link>
+    <description>Recent content in Projects on Andrew Alarcon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://andrew-alarcon17.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project 14: Starbucks Customers &amp; Offers</title>
+      <link>https://andrew-alarcon17.github.io/post/project-14/</link>
+      <pubDate>Thu, 09 Sep 2021 11:25:05 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-14/</guid>
+      <description>Problem Introduction This project contains mimicked user behavior on the Starbucks rewards mobile application. In this app, Starbucks sends out offers to its customers, like BOGO (buy one, get one free) or a discount. Different users get different offers. So the main goal of this project was to figure out which offers succeed the most to which types of customers.
+Data Description: There are three main data sets that we will be working with for this project.</description>
+    </item>
+    
+    <item>
+      <title>Project 13: Disaster Pipelines</title>
+      <link>https://andrew-alarcon17.github.io/post/project-13/</link>
+      <pubDate>Tue, 20 Jul 2021 11:25:05 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-13/</guid>
+      <description>Project Introduction During natural disasters, there are organizations that people can contact in case of an emergency for assistance or for general knowledge about what is currently going on. This could involve situations like hurricanes, earthquakes, power outages, and more.
+In this article, I take in the many messages that people send to these organizations and try top classify the type of disaster it is related to based on the context of the message.</description>
+    </item>
+    
+    <item>
+      <title>Project 11: Video Games Sales Analysis</title>
+      <link>https://andrew-alarcon17.github.io/post/project-11/</link>
+      <pubDate>Wed, 05 May 2021 11:25:05 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-11/</guid>
+      <description>Data Description: This data set consists of video game sales by publisher, region, genre, rating, and developer, as well as their critic and user review scores.
+Project Summary: For this project, I wanted to explore the sales of video games during the years between 1980 and 2016. More specifically, I was curious to see which publishers and developers performed the best in terms of sales, as well as what types of games were selling the most and in which regions.</description>
+    </item>
+    
+    <item>
+      <title>Project 12: Airbnb Homes In Boston: What to Look Out For</title>
+      <link>https://andrew-alarcon17.github.io/post/project-12/</link>
+      <pubDate>Wed, 05 May 2021 11:25:05 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-12/</guid>
+      <description>Introduction If you’ve ever looked to book for a homestay vacation rental that you could book online, then I’m sure you’ve must’ve come across Airbnb at some point in time. You can book homes in busy cities, or more laid back towns.
+In this article, we will be diving into the Airbnb space in Boston. More specifically, we will look into which neighborhoods in Boston have the most homes, the reviews for those homes by neighborhood, and their prices.</description>
+    </item>
+    
+    <item>
+      <title>Project 10: Magic the Gathering - Analysis and NLP</title>
+      <link>https://andrew-alarcon17.github.io/post/project-10/</link>
+      <pubDate>Mon, 26 Apr 2021 11:25:05 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-10/</guid>
+      <description>Data Description: This data consists of all the information present on Magic the Gathering cards, such as color identity, converted mana cost, power, toughness, text (description), and rarity to name a few.
+Project Summary: For this project, I wanted to explore the presence of creatures within each color of mana, along with those that are multi colored, and colorless. Some of the attributes that were visualized were the distributions of power, toughness, and mana cost of creatures.</description>
+    </item>
+    
+    <item>
+      <title>Project 8: Crime Rates in Denver</title>
+      <link>https://andrew-alarcon17.github.io/post/project-8/</link>
+      <pubDate>Mon, 02 Nov 2020 11:25:05 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-8/</guid>
+      <description>Data Description: This data contains criminal offenses in the City and County of Denver for the last 5 years.
+  Project Summary: For this project, I wanted to visualize the different types of crimes that appear in Denver. I also created visualizations for resampled crime data for years, months, and quarters of the year. I used Prophet to forecast this time series data to predict crime rates.
+Findings: Here is the plot of our predictions.</description>
+    </item>
+    
+    <item>
+      <title>Project 7: Image Classification using CNN</title>
+      <link>https://andrew-alarcon17.github.io/post/project-7/</link>
+      <pubDate>Wed, 28 Oct 2020 11:25:05 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-7/</guid>
+      <description>Data Description: This data contains images that belong to the following 10 classes:
+-Airplanes
+-Cars
+-Birds
+-Cats
+-Deer
+-Dogs
+-Frogs
+-Horses
+-Ships
+-Trucks
+There are 6,000 images for each class, and each image has a low resolution. Here are a few examples of how the images look:
+  Project Summary: For this project, I will be creating a Convolutional Neural Network that will be able to classify the images in the data set.</description>
+    </item>
+    
+    <item>
+      <title>Project 6: Credit Risk Modeling</title>
+      <link>https://andrew-alarcon17.github.io/post/project-6/</link>
+      <pubDate>Sat, 30 May 2020 11:25:05 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-6/</guid>
+      <description>Data Description: This data contains information about consumer loans in 2015 by a company called Lending Club. Features in this data include credit scores, number of finance inquiries, address including zip codes, and state, and many others. The file is a matrix of about 421 thousand observations and 74 variables.
+Project Summary: For this project, I will be exploring a dataset of debtors (borrowers) in order to try to compute three main components:</description>
+    </item>
+    
+    <item>
+      <title>Project 5: Breast Cancer Prediction</title>
+      <link>https://andrew-alarcon17.github.io/post/project-5/</link>
+      <pubDate>Fri, 17 Apr 2020 11:15:58 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-5/</guid>
+      <description>Data Description: This data set contains information of 285 patients with 33 features describing their diagnosis.
+Background: As someone who is driven in understanding what the chances of a disease having serious effect on a person would be, I wanted to be able to dive into this dataset to understand the probabilities of breast cancer being benign or malignant based on characteristics that will be focused on.
+Findings: For each respective mean in the four charts above, we see that Area, Compactness, Concavity, and Concave all seem to have a probability of being benign at the lower values of their x-axes.</description>
+    </item>
+    
+    <item>
+      <title>Project 4: Covid-19 Analysis</title>
+      <link>https://andrew-alarcon17.github.io/post/project-4/</link>
+      <pubDate>Mon, 30 Mar 2020 11:14:48 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-4/</guid>
+      <description>Data Description: This data contains information of those observed with the virus as of March 26th, 2020. More specifically, whether it is confirmed if they have the virus, if they have recovered, or if they have passed away due to the virus. This data also contains information on where the person observed is from with the columns State/Province and Country/Region.
+Background: As of March 26th, 2020, the purpose of this notebook is to understand the growth rate of the Covid-19 virus in China and the U.</description>
+    </item>
+    
+    <item>
+      <title>Project 3: Predicting Pitchfork Music Review Scores with NLP</title>
+      <link>https://andrew-alarcon17.github.io/post/project-3/</link>
+      <pubDate>Thu, 20 Jun 2019 11:13:32 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-3/</guid>
+      <description>Data Description: This is a data set of music reviews from the website Pitchfork.com. The data contains features such as artists, labels, review content, review scores, year, etc.
+Background: As someone who reads Pitchfork reviews very often, I wanted to see how specific language in these written reviews reflects whether or not an album is considered good or bad. To do this, I constructed a bag of words model in order to classify these albums.</description>
+    </item>
+    
+    <item>
+      <title>Project 2: Pitchfork Music Reviews - Data Analysis</title>
+      <link>https://andrew-alarcon17.github.io/post/project-2/</link>
+      <pubDate>Mon, 10 Jun 2019 11:00:59 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-2/</guid>
+      <description>Data Description: This is a data set of music reviews from the website Pitchfork.com. The data contains features such as artists, labels, review content, review scores, year, etc.
+Background: I&amp;rsquo;m an avid viewer of Pitchfork music reviews, and I wanted to dive deeper into their album scores and how they vary from genre to genre, and year by year. I also wanted to see if there exists a correlation between review length and the score of the review, and also the variation of scores from who wrote the reviews.</description>
+    </item>
+    
+    <item>
+      <title>Project 1: Diamond Quality</title>
+      <link>https://andrew-alarcon17.github.io/post/project-1/</link>
+      <pubDate>Wed, 01 May 2019 10:58:08 -0400</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-1/</guid>
+      <description>Data Description: This data set contains prices and attributes of 50,0000 diamonds.
+Background: This notebook contains exploratory analysis of the data. Distributions of variables were analyzed in order to understand their relationships with diamond price. Important questions such as which feature affects the price of the diamond the most and vice versa will be discussed.
+Regressions were made and measured on certain features in order to have a better understanding of how these features explain the price of a diamond.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://andrew-alarcon17.github.io/post/project-15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://andrew-alarcon17.github.io/post/project-15/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
