@@ -1,4 +1,4 @@
-# BrainStation-Capstone
+# BrainStation-Capstone - Movie Genre Classification using Natural Language Processing
 
 
 ## Introduction
